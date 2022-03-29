@@ -22,6 +22,7 @@ class ResturantTableViewController: UITableViewController {
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
 var usman = true
+    var new = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
