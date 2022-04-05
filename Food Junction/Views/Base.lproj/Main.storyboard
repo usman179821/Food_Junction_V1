@@ -220,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxu-xi-qbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805.7971014492755" y="150.66964285714286"/>
+            <point key="canvasLocation" x="2619" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t7c-vB-D9e">
@@ -238,7 +238,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2J-l6-qXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895.6521739130437" y="150.66964285714286"/>
+            <point key="canvasLocation" x="1709" y="127"/>
         </scene>
         <!--Restaturant Detail View Controller-->
         <scene sceneID="EYP-R9-wgc">
@@ -313,7 +313,7 @@
                                     </connections>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailIconTextCell" id="kCk-jq-ZI5" customClass="RestaurantIconViewCell" customModule="Food_Junction" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="kCk-jq-ZI5" customClass="RestaurantIconViewCell" customModule="Food_Junction" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="394.5" width="414" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kCk-jq-ZI5" id="tjp-Ll-V57">
@@ -351,7 +351,7 @@
                                             <outlet property="shortTextLabel" destination="o7j-oA-e3r" id="KC8-LE-fqH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTextCell" id="Kux-K7-2Ui" customClass="RestatuarantDetailTableViewCell" customModule="Food_Junction" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="restaurantcell" id="Kux-K7-2Ui" customClass="RestatuarantDetailTableViewCell" customModule="Food_Junction" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="439" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kux-K7-2Ui" id="I7q-FZ-YnG">
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Eo-ny-6z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3729" y="151"/>
+            <point key="canvasLocation" x="3457" y="127"/>
         </scene>
     </scenes>
     <resources>

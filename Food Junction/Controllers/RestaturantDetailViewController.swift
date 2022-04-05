@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RestaturantDetailViewController: UIViewController {
+class RestaturantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: RestaurantDetailHeaderView!
@@ -26,8 +26,8 @@ class RestaturantDetailViewController: UIViewController {
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
         
 //        // Set the table view's delegate and data source
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
         // Configure the table view's style
         tableView.separatorStyle = .none
@@ -48,21 +48,21 @@ class RestaturantDetailViewController: UIViewController {
         switch indexPath.row {
             
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: "RestaurantDetailIconTextCell".self), for: indexPath) as! RestaurantIconViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: "cell".self), for: indexPath) as! RestaurantIconViewCell
             cell.iconImageView.image = UIImage(named: "phone")
             cell.shortTextLabel.text = restaurant.phone
             cell.selectionStyle = .none
             
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: "RestaurantDetailIconTextCell".self), for: indexPath) as! RestaurantIconViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: "cell".self), for: indexPath) as! RestaurantIconViewCell
             cell.iconImageView.image = UIImage(named: "map")
             cell.shortTextLabel.text = restaurant.location
             cell.selectionStyle = .none
             
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: "RestaurantDetailTextCell".self), for: indexPath) as! RestatuarantDetailTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: "restaurantcell".self), for: indexPath) as! RestatuarantDetailTableViewCell
             cell.descriptionLabel.text = restaurant.description
             cell.selectionStyle = .none
             
