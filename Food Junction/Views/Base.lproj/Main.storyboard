@@ -152,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="mrB-3J-V9x" customClass="RestaurantTableViewCell" customModule="Food_Junction" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="mrB-3J-V9x" customClass="RestaurantTableCell" customModule="Food_Junction" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mrB-3J-V9x" id="xlE-4S-9uh">
@@ -203,10 +203,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="NameLable" destination="gR4-vA-8sh" id="d60-eA-KA2"/>
-                                    <outlet property="TypeLable" destination="yyc-c0-53q" id="I9e-Xb-PtK"/>
-                                    <outlet property="locationLable" destination="BAB-kr-MfW" id="0Q6-GP-xMZ"/>
-                                    <outlet property="thumbnailImageView" destination="xb9-W4-sbX" id="xNl-dU-2PM"/>
+                                    <outlet property="locationLabel" destination="BAB-kr-MfW" id="TPH-M4-LTg"/>
+                                    <outlet property="nameLabel" destination="gR4-vA-8sh" id="j4F-3I-zUe"/>
+                                    <outlet property="thumbnailImageView" destination="xb9-W4-sbX" id="Skv-U8-XPG"/>
+                                    <outlet property="typeLabel" destination="yyc-c0-53q" id="7xp-lI-uUR"/>
                                     <segue destination="xX6-Sw-QDr" kind="show" identifier="Restaurant" id="PR8-Ep-aMc"/>
                                 </connections>
                             </tableViewCell>
