@@ -1,29 +1,25 @@
 //
-//  RestaurantTableViewCell.swift
+//  RestaurantTableCell.swift
 //  Food Junction
 //
-//  Created by Swifty on 3/25/22.
+//  Created by apple on 06/04/2022.
 //
 
 import UIKit
 
-class RestaurantTableViewCell: UITableViewCell {
-    
-    
+class RestaurantTableCell: UITableViewCell {
+
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
-    @IBOutlet var thumbnailImageView: UIImageView!
-    
-    
-    
-    {
+    @IBOutlet var thumbnailImageView: UIImageView! {
         didSet {
             thumbnailImageView.layer.cornerRadius = thumbnailImageView.bounds.width / 2
             thumbnailImageView.clipsToBounds = true
         }
     }
-
+    
+    @IBOutlet var heartImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
