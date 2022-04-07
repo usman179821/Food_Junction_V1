@@ -143,7 +143,7 @@
             </objects>
             <point key="canvasLocation" x="2055" y="-852"/>
         </scene>
-        <!--Food Juction-->
+        <!--Food juction-->
         <scene sceneID="9PS-RR-PcN">
             <objects>
                 <tableViewController id="S7l-od-pCM" customClass="RestaurantTableViewController" customModule="Food_Junction" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,7 +216,9 @@
                             <outlet property="delegate" destination="S7l-od-pCM" id="Itb-1X-ASE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food Juction" id="Sg9-zh-hYv"/>
+                    <navigationItem key="navigationItem" title="Food juction" id="Sg9-zh-hYv">
+                        <barButtonItem key="backBarButtonItem" title=" " id="KeE-l5-7Cq"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxu-xi-qbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,7 +265,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXl-Kw-CAJ" userLabel="Name Label">
-                                            <rect key="frame" x="14" y="272" width="86" height="41"/>
+                                            <rect key="frame" x="14" y="271.5" width="91.5" height="41.5"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
                                             <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -331,7 +333,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-oA-e3r">
-                                                            <rect key="frame" x="30" y="2" width="338" height="16.5"/>
+                                                            <rect key="frame" x="30" y="2" width="338" height="17"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -352,14 +354,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="restaurantcell" id="Kux-K7-2Ui" customClass="RestatuarantDetailTableViewCell" customModule="Food_Junction" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="439" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="439" width="414" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kux-K7-2Ui" id="I7q-FZ-YnG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U19-a9-eeW">
-                                                    <rect key="frame" x="23" y="11" width="368" height="18"/>
+                                                    <rect key="frame" x="23" y="11" width="368" height="18.5"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

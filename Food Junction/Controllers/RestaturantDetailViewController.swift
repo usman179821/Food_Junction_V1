@@ -16,8 +16,15 @@ class RestaturantDetailViewController: UIViewController, UITableViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //MARK:- customize its Detail navigation bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        tableView.contentInsetAdjustmentBehavior = .never
+
         navigationItem.largeTitleDisplayMode = .never
+        
+        navigationController?.hidesBarsOnSwipe = false
         
         // Configure header view
         headerView.nameLabel.text = restaurant.name
@@ -31,6 +38,13 @@ class RestaturantDetailViewController: UIViewController, UITableViewDataSource, 
         
         // Configure the table view's style
         tableView.separatorStyle = .none
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // MARK: - UITableViewDataSource methods
