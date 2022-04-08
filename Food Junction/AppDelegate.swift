@@ -13,12 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
+//        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.5089046359, green: 0.07109685987, blue: 0.9164965749, alpha: 1)
+//         UINavigationBar.appearance().alpha = 0.3
+//        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//        UINavigationBar.appearance().isTranslucent = false
+
+
+       //  Override point for customization after application launch.
+        UIApplication.shared.statusBarStyle = .darkContent
         let backButtonImage = UIImage(named: "back")
         UINavigationBar.appearance().backIndicatorImage = backButtonImage
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = backButtonImage
-
+        //UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return true
         
         

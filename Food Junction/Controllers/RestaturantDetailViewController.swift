@@ -24,8 +24,6 @@ class RestaturantDetailViewController: UIViewController, UITableViewDataSource, 
 
         navigationItem.largeTitleDisplayMode = .never
         
-        navigationController?.hidesBarsOnSwipe = false
-        
         // Configure header view
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type

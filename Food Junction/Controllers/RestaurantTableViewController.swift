@@ -58,7 +58,13 @@ class RestaurantTableViewController: UITableViewController {
         navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont ]
         }
         navigationController?.hidesBarsOnSwipe = true
-    }
+        
+   }
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            navigationController?.hidesBarsOnSwipe = true
+        }
+    
 
         //navigationItem.largeTitleDisplayMode = .never
         // Uncomment the following line to preserve selection between presentations
