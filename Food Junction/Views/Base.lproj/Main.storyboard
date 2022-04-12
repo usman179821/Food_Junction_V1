@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrB-tr-KwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="-852"/>
+            <point key="canvasLocation" x="2335" y="-2330"/>
         </scene>
         <!--Food juction-->
         <scene sceneID="9PS-RR-PcN">
@@ -247,11 +247,11 @@
             <objects>
                 <viewController id="xX6-Sw-QDr" customClass="RestaturantDetailViewController" customModule="Food_Junction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ha-qD-gnT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-Al-Uft">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="866"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="nWZ-fr-n43" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="Food_Junction" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -378,6 +378,67 @@
                                             <outlet property="descriptionLabel" destination="U19-a9-eeW" id="pWX-7Z-Zw3"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SeprateCell" rowHeight="60" id="hNO-8y-Y1b" customClass="RestaurantDetailSeprateCell" customModule="Food_Junction" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="483.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hNO-8y-Y1b" id="3VG-i2-6Gc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OrS-Rh-Yta">
+                                                    <rect key="frame" x="38" y="16" width="338" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO GET HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poG-WE-aRQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="338" height="15"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wL-yy-Fib" userLabel="Separator">
+                                                            <rect key="frame" x="0.0" y="20" width="338" height="1"/>
+                                                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="343" id="mZJ-PU-zXD"/>
+                                                                <constraint firstAttribute="height" constant="1" id="zbR-cH-yhl"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OrS-Rh-Yta" secondAttribute="trailing" constant="18" id="Bc2-97-WYl"/>
+                                                <constraint firstItem="OrS-Rh-Yta" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3VG-i2-6Gc" secondAttribute="topMargin" constant="5" id="PVT-ga-4hA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OrS-Rh-Yta" secondAttribute="bottom" constant="12" id="YLh-KF-pnP"/>
+                                                <constraint firstItem="OrS-Rh-Yta" firstAttribute="leading" secondItem="3VG-i2-6Gc" secondAttribute="leadingMargin" constant="18" id="cKI-tP-A3L"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLablel" destination="poG-WE-aRQ" id="dds-Wm-60x"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailMapCell" rowHeight="215" id="WaK-8l-VO7" customClass="RestaurantDetailMapCell" customModule="Food_Junction" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="543.5" width="414" height="215"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WaK-8l-VO7" id="KT2-Y3-5lF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQM-o7-1cM">
+                                                    <rect key="frame" x="20" y="11" width="374" height="193"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IQM-o7-1cM" secondAttribute="bottom" id="EHR-Uj-PpE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IQM-o7-1cM" secondAttribute="trailing" id="P7L-kT-2OS"/>
+                                                <constraint firstItem="IQM-o7-1cM" firstAttribute="leading" secondItem="KT2-Y3-5lF" secondAttribute="leadingMargin" id="iSU-9Q-dN5"/>
+                                                <constraint firstItem="IQM-o7-1cM" firstAttribute="top" secondItem="KT2-Y3-5lF" secondAttribute="topMargin" id="rwo-VX-yNS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="MapView" destination="IQM-o7-1cM" id="ZaA-Ft-rB6"/>
+                                            <segue destination="ZsO-PV-A8a" kind="show" identifier="showMap" id="9vO-Mj-nu3"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -391,6 +452,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xII-Dc-vpO"/>
+                    <size key="freeformSize" width="414" height="900"/>
                     <connections>
                         <outlet property="headerView" destination="nWZ-fr-n43" id="273-XH-LgK"/>
                         <outlet property="tableView" destination="eOb-Al-Uft" id="3Ap-0C-MZx"/>
@@ -398,7 +460,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Eo-ny-6z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3457" y="127"/>
+            <point key="canvasLocation" x="3456.521739130435" y="126.5625"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="azl-HG-adA">
+            <objects>
+                <viewController id="ZsO-PV-A8a" customClass="MapViewController" customModule="Food_Junction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zWm-u3-9S7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NDM-8w-k53">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KNF-fw-yhW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KNF-fw-yhW" firstAttribute="bottom" secondItem="NDM-8w-k53" secondAttribute="bottom" id="P23-pF-60Z"/>
+                            <constraint firstItem="NDM-8w-k53" firstAttribute="leading" secondItem="KNF-fw-yhW" secondAttribute="leading" id="RT9-0l-0hJ"/>
+                            <constraint firstItem="KNF-fw-yhW" firstAttribute="trailing" secondItem="NDM-8w-k53" secondAttribute="trailing" id="hK2-m4-IdS"/>
+                            <constraint firstItem="NDM-8w-k53" firstAttribute="top" secondItem="KNF-fw-yhW" secondAttribute="top" id="ti3-Cv-PWf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OFS-1N-yDz"/>
+                    <connections>
+                        <outlet property="Mapview" destination="NDM-8w-k53" id="nBF-3R-nYz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPL-k5-mKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271" y="126"/>
         </scene>
     </scenes>
     <resources>
@@ -408,6 +500,9 @@
         <image name="phone" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
