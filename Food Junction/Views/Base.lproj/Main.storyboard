@@ -396,7 +396,7 @@
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wL-yy-Fib" userLabel="Separator">
                                                             <rect key="frame" x="0.0" y="20" width="338" height="1"/>
-                                                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="343" id="mZJ-PU-zXD"/>
                                                                 <constraint firstAttribute="height" constant="1" id="zbR-cH-yhl"/>
@@ -424,14 +424,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQM-o7-1cM">
-                                                    <rect key="frame" x="20" y="11" width="374" height="193"/>
+                                                    <rect key="frame" x="20" y="21" width="374" height="183"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="183" id="9yR-RF-ejF"/>
+                                                    </constraints>
                                                 </mapView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="IQM-o7-1cM" secondAttribute="bottom" id="EHR-Uj-PpE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="IQM-o7-1cM" secondAttribute="trailing" id="P7L-kT-2OS"/>
                                                 <constraint firstItem="IQM-o7-1cM" firstAttribute="leading" secondItem="KT2-Y3-5lF" secondAttribute="leadingMargin" id="iSU-9Q-dN5"/>
-                                                <constraint firstItem="IQM-o7-1cM" firstAttribute="top" secondItem="KT2-Y3-5lF" secondAttribute="topMargin" id="rwo-VX-yNS"/>
+                                                <constraint firstItem="IQM-o7-1cM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KT2-Y3-5lF" secondAttribute="topMargin" constant="10" id="rwo-VX-yNS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -500,9 +503,6 @@
         <image name="phone" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
