@@ -9,6 +9,7 @@ import UIKit
 
 class RestaturantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var rateBtn: UIButton!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: RestaurantDetailHeaderView!
     
@@ -17,6 +18,8 @@ class RestaturantDetailViewController: UIViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        rateBtn.layer.cornerRadius = 25
         navigationItem.largeTitleDisplayMode = .never
         
         // Configure header view
@@ -59,6 +62,8 @@ class RestaturantDetailViewController: UIViewController, UITableViewDataSource, 
         navigationController?.navigationBar.tintColor = .white
         navigationController?.hidesBarsOnSwipe = false
     }
+    
+   
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -124,11 +129,17 @@ class RestaturantDetailViewController: UIViewController, UITableViewDataSource, 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMap" {
-            let destinationController = segue.destination as! MapViewController
-            destinationController.restaurant = restaurant
-        }
+    let destinationController = segue.destination as! MapViewController
+        destinationController.restaurant = restaurant
+    } else if segue.identifier == "showReview" {
+    let destinationController = segue.destination as! ReviewViewController
+        destinationController.restaurant = restaurant
     }
+        }
     
+    @IBAction func close(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
 

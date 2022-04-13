@@ -247,11 +247,11 @@
             <objects>
                 <viewController id="xX6-Sw-QDr" customClass="RestaturantDetailViewController" customModule="Food_Junction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ha-qD-gnT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1030"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-Al-Uft">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="866"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="996"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="nWZ-fr-n43" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="Food_Junction" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -313,6 +313,33 @@
                                         <outlet property="nameLabel" destination="UXl-Kw-CAJ" id="8MD-Ue-gTk"/>
                                         <outlet property="typeLabel" destination="3ta-19-Kto" id="G4W-cs-3N0"/>
                                     </connections>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Ylb-fL-H5q">
+                                    <rect key="frame" x="0.0" y="781" width="414" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7K-yG-qAf">
+                                            <rect key="frame" x="15" y="22" width="384" height="47"/>
+                                            <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="343" id="LTQ-66-G5x"/>
+                                                <constraint firstAttribute="height" constant="47" id="jIz-hb-9PT"/>
+                                            </constraints>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Rate it">
+                                                <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <segue destination="7Eu-rn-CI0" kind="presentation" identifier="showReview" modalTransitionStyle="crossDissolve" id="mzc-Ds-eZ3"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="o7K-yG-qAf" secondAttribute="trailing" constant="15" id="0Yl-bc-3pV"/>
+                                        <constraint firstAttribute="bottom" secondItem="o7K-yG-qAf" secondAttribute="bottom" constant="21" id="2Ej-5y-dRD"/>
+                                        <constraint firstItem="o7K-yG-qAf" firstAttribute="leading" secondItem="Ylb-fL-H5q" secondAttribute="leading" constant="15" id="gME-bL-BlU"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="kCk-jq-ZI5" customClass="RestaurantIconViewCell" customModule="Food_Junction" customModuleProvider="target">
@@ -455,9 +482,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xII-Dc-vpO"/>
-                    <size key="freeformSize" width="414" height="900"/>
+                    <size key="freeformSize" width="414" height="1030"/>
                     <connections>
                         <outlet property="headerView" destination="nWZ-fr-n43" id="273-XH-LgK"/>
+                        <outlet property="rateBtn" destination="o7K-yG-qAf" id="Esr-st-yLH"/>
                         <outlet property="tableView" destination="eOb-Al-Uft" id="3Ap-0C-MZx"/>
                     </connections>
                 </viewController>
@@ -475,6 +503,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NDM-8w-k53">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KNF-fw-yhW"/>
@@ -493,14 +522,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPL-k5-mKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="126"/>
+            <point key="canvasLocation" x="4487" y="-204"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="oaC-4w-srz">
+            <objects>
+                <viewController id="7Eu-rn-CI0" customClass="ReviewViewController" customModule="Food_Junction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKr-8S-iSz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CCo-m8-gxn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGg-6N-CzD">
+                                <rect key="frame" x="341" y="0.0" width="57" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cross" title=""/>
+                                <connections>
+                                    <segue destination="Sw0-AY-qOv" kind="unwind" unwindAction="closeWithSegue:" id="vNv-L4-3Oq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zUp-cZ-dFM">
+                                <rect key="frame" x="81.5" y="145.5" width="251" height="551"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwF-SN-lc3">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="96"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="love" title="Love">
+                                            <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIy-hP-i07">
+                                        <rect key="frame" x="0.0" y="106" width="204.5" height="97"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="cool" title="Cool">
+                                            <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxJ-WV-ccS">
+                                        <rect key="frame" x="0.0" y="213" width="251" height="100"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="happy" title="Happy">
+                                            <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhH-B7-fWE">
+                                        <rect key="frame" x="0.0" y="323" width="190.5" height="101"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="sad" title="Sad">
+                                            <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvL-yU-Bel">
+                                        <rect key="frame" x="0.0" y="434" width="242" height="117"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="angry" title="Angry">
+                                            <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="prf-7K-fdD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="prf-7K-fdD" firstAttribute="bottom" secondItem="CCo-m8-gxn" secondAttribute="bottom" id="6OA-dY-SdY"/>
+                            <constraint firstItem="JGg-6N-CzD" firstAttribute="top" secondItem="prf-7K-fdD" secondAttribute="top" id="94m-Hp-cmk"/>
+                            <constraint firstItem="zUp-cZ-dFM" firstAttribute="centerY" secondItem="sKr-8S-iSz" secondAttribute="centerY" id="994-uf-vpM"/>
+                            <constraint firstItem="prf-7K-fdD" firstAttribute="trailing" secondItem="CCo-m8-gxn" secondAttribute="trailing" id="MeM-0Z-ozi"/>
+                            <constraint firstItem="CCo-m8-gxn" firstAttribute="top" secondItem="prf-7K-fdD" secondAttribute="top" id="YSw-aX-Akp"/>
+                            <constraint firstItem="prf-7K-fdD" firstAttribute="trailing" secondItem="JGg-6N-CzD" secondAttribute="trailing" constant="16" id="bnT-cY-Qvb"/>
+                            <constraint firstItem="CCo-m8-gxn" firstAttribute="leading" secondItem="prf-7K-fdD" secondAttribute="leading" id="pzH-D5-Iqh"/>
+                            <constraint firstItem="zUp-cZ-dFM" firstAttribute="centerX" secondItem="sKr-8S-iSz" secondAttribute="centerX" id="yaD-aN-934"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="CCo-m8-gxn" id="Nt4-uk-Fr5"/>
+                        <outletCollection property="rateButtons" destination="FwF-SN-lc3" collectionClass="NSMutableArray" id="asd-jC-rSL"/>
+                        <outletCollection property="rateButtons" destination="rIy-hP-i07" collectionClass="NSMutableArray" id="ysK-hS-eRr"/>
+                        <outletCollection property="rateButtons" destination="hxJ-WV-ccS" collectionClass="NSMutableArray" id="wSw-nN-V8H"/>
+                        <outletCollection property="rateButtons" destination="fhH-B7-fWE" collectionClass="NSMutableArray" id="KMD-1V-hzz"/>
+                        <outletCollection property="rateButtons" destination="DvL-yU-Bel" collectionClass="NSMutableArray" id="6QN-tZ-flz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="di6-Gk-MRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Sw0-AY-qOv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4486.9565217391309" y="496.875"/>
         </scene>
     </scenes>
     <resources>
+        <image name="angry" width="78" height="103"/>
         <image name="cafeloisl" width="480" height="480"/>
+        <image name="cool" width="78" height="83"/>
+        <image name="cross" width="33" height="32"/>
         <image name="forkeerestaurant" width="480" height="480"/>
+        <image name="happy" width="78" height="86"/>
         <image name="homei" width="480" height="480"/>
+        <image name="love" width="78" height="82"/>
         <image name="phone" catalog="system" width="128" height="115"/>
+        <image name="sad" width="78" height="87"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
