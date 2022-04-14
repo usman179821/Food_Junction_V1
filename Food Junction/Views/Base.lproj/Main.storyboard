@@ -264,6 +264,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="love" translatesAutoresizingMaskIntoConstraints="NO" id="Z4r-HS-Ayp">
+                                            <rect key="frame" x="354" y="288" width="50" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="C2l-qK-52u"/>
+                                                <constraint firstAttribute="height" constant="52" id="sUO-jM-61k"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXl-Kw-CAJ" userLabel="Name Label">
                                             <rect key="frame" x="14" y="271.5" width="91.5" height="41.5"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
@@ -296,6 +303,7 @@
                                         <constraint firstItem="3ta-19-Kto" firstAttribute="centerY" secondItem="O6i-I1-xYy" secondAttribute="centerY" id="8a7-Ri-SEx"/>
                                         <constraint firstItem="8JG-yu-P8U" firstAttribute="top" secondItem="nWZ-fr-n43" secondAttribute="top" id="8eX-Ic-Ezu"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UXl-Kw-CAJ" secondAttribute="trailing" constant="50" id="EtT-Kt-5OS"/>
+                                        <constraint firstAttribute="bottom" secondItem="Z4r-HS-Ayp" secondAttribute="bottom" constant="10" id="G2h-wH-cua"/>
                                         <constraint firstItem="IRk-0u-Nfy" firstAttribute="top" secondItem="nWZ-fr-n43" secondAttribute="top" id="IS4-f1-e7I"/>
                                         <constraint firstAttribute="bottom" secondItem="IRk-0u-Nfy" secondAttribute="bottom" id="Lif-qe-TpW"/>
                                         <constraint firstAttribute="trailing" secondItem="8JG-yu-P8U" secondAttribute="trailing" id="Syr-0r-nb4"/>
@@ -303,6 +311,7 @@
                                         <constraint firstItem="O6i-I1-xYy" firstAttribute="leading" secondItem="3ta-19-Kto" secondAttribute="trailing" constant="8" id="eEI-3w-aqY"/>
                                         <constraint firstItem="UXl-Kw-CAJ" firstAttribute="leading" secondItem="3ta-19-Kto" secondAttribute="leading" id="h9A-Bw-CE6"/>
                                         <constraint firstItem="8JG-yu-P8U" firstAttribute="leading" secondItem="nWZ-fr-n43" secondAttribute="leading" id="nm3-9K-Zfg"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z4r-HS-Ayp" secondAttribute="trailing" constant="10" id="rAb-wu-8oV"/>
                                         <constraint firstAttribute="bottom" secondItem="8JG-yu-P8U" secondAttribute="bottom" id="sRI-49-CH8"/>
                                         <constraint firstItem="IRk-0u-Nfy" firstAttribute="leading" secondItem="nWZ-fr-n43" secondAttribute="leading" id="uHr-Mw-e6a"/>
                                         <constraint firstAttribute="bottom" secondItem="3ta-19-Kto" secondAttribute="bottom" constant="14" id="zFt-0x-8Bg"/>
@@ -311,6 +320,7 @@
                                         <outlet property="headerImageView" destination="IRk-0u-Nfy" id="Tkv-Tj-pql"/>
                                         <outlet property="heartImageView" destination="O6i-I1-xYy" id="FXW-Vo-di4"/>
                                         <outlet property="nameLabel" destination="UXl-Kw-CAJ" id="8MD-Ue-gTk"/>
+                                        <outlet property="ratingImageView" destination="Z4r-HS-Ayp" id="wSw-82-Bn8"/>
                                         <outlet property="typeLabel" destination="3ta-19-Kto" id="G4W-cs-3N0"/>
                                     </connections>
                                 </view>
@@ -541,51 +551,66 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="cross" title=""/>
                                 <connections>
-                                    <segue destination="Sw0-AY-qOv" kind="unwind" unwindAction="closeWithSegue:" id="vNv-L4-3Oq"/>
+                                    <segue destination="Sw0-AY-qOv" kind="unwind" identifier="" unwindAction="closeWithSegue:" id="vNv-L4-3Oq"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zUp-cZ-dFM">
-                                <rect key="frame" x="81.5" y="145.5" width="251" height="551"/>
+                                <rect key="frame" x="82.5" y="145.5" width="249.5" height="551"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwF-SN-lc3">
-                                        <rect key="frame" x="0.0" y="0.0" width="212" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210.5" height="96"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="love" title="Love">
                                             <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Sw0-AY-qOv" kind="unwind" identifier="love" unwindAction="rateRestaurantWithSegue:" id="Cuc-Rj-EQj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIy-hP-i07">
-                                        <rect key="frame" x="0.0" y="106" width="204.5" height="97"/>
+                                        <rect key="frame" x="0.0" y="106" width="207" height="97"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="cool" title="Cool">
                                             <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Sw0-AY-qOv" kind="unwind" identifier="cool" unwindAction="rateRestaurantWithSegue:" id="DXS-yS-62n"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxJ-WV-ccS">
-                                        <rect key="frame" x="0.0" y="213" width="251" height="100"/>
+                                        <rect key="frame" x="0.0" y="213" width="249.5" height="100"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="happy" title="Happy">
                                             <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Sw0-AY-qOv" kind="unwind" identifier="happy" unwindAction="rateRestaurantWithSegue:" id="5cU-xU-fgP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhH-B7-fWE">
-                                        <rect key="frame" x="0.0" y="323" width="190.5" height="101"/>
+                                        <rect key="frame" x="0.0" y="323" width="191" height="101"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="sad" title="Sad">
                                             <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Sw0-AY-qOv" kind="unwind" identifier="sad" unwindAction="rateRestaurantWithSegue:" id="92B-V7-7Q7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvL-yU-Bel">
-                                        <rect key="frame" x="0.0" y="434" width="242" height="117"/>
+                                        <rect key="frame" x="0.0" y="434" width="233" height="117"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="angry" title="Angry">
                                             <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Sw0-AY-qOv" kind="unwind" identifier="angry" unwindAction="rateRestaurantWithSegue:" id="z8M-xz-Tsa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
